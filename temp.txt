@@ -1,0 +1,24 @@
+
+
+const row = document.createElement('div');
+row.classList.add('row');
+
+
+for (let i = 0; i < 5; i++) {
+    const squareElement = document.createElement('div');
+    squareElement.classList.add('square');
+    row.appendChild(squareElement);
+}
+container.appendChild(row);
+
+
+const row2 = document.createElement('div');
+row2.classList.add('row2');
+
+for (let i = 0; i < 5; i++) {
+    const squareElement = document.createElement('div');
+    squareElement.classList.add('square');
+    row2.appendChild(squareElement);
+}
+
+container.appendChild(row2);
