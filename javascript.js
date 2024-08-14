@@ -1,15 +1,32 @@
 
+//set initial grid size
+let gridSize = 2;
 
-let gridSize = 20;
+//generate grid and set initial values to the grid and text content
+generateGrid();
+const value = document.querySelector("#value");
+const input = document.querySelector("#slider");
+value.textContent = input.value;
 
-for (i = 0; i < gridSize; i++) {
-  const row = document.createElement("div");
-  row.classList.add("row");
+//check for input event update and regenerate grid
+input.addEventListener("input", (event) => {
+  value.textContent = event.target.value;
+  gridSize = parseInt(value.textContent);
+  container.innerHTML = "";
+  generateGrid();
+});
 
-  for (let i = 0; i < gridSize; i++) {
-    const squareElement = document.createElement("div");
-    squareElement.classList.add("square");
-    row.appendChild(squareElement);
+//grid function which draws the grid row by row
+function generateGrid() {
+  for (i = 0; i < gridSize; i++) {
+    const row = document.createElement("div");
+    row.classList.add("row");
+
+    for (let i = 0; i < gridSize; i++) {
+      const squareElement = document.createElement("div");
+      squareElement.classList.add("square");
+      row.appendChild(squareElement);
+    }
+    container.appendChild(row);
   }
-  container.appendChild(row);
 }
