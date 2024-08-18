@@ -22,3 +22,7 @@ for (let i = 0; i < 5; i++) {
 }
 
 container.appendChild(row2);
+
+document.getElementsByClassName("square").addEventListener("mouseover", () => {
+  squareElement.classList.add("squareOver");
+});

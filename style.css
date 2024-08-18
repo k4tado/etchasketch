@@ -1,9 +1,3 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .square {
     border: 1px;
     border-style: solid;
@@ -11,7 +5,7 @@ body {
     flex: 1;
 }
 
-#container {
+#gridcontainer {
     display: flex;
     flex-direction: column;
     height: 700px;
@@ -31,4 +25,24 @@ body {
 
 #sliderContainer{
     display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding:10px;
+}
+
+#container {
+    display: flex;
+}
+
+h1 {
+   text-align: center;
+   color: blue;
+}
+
+.squareOver {
+    border: 1px;
+    border-style: solid;
+    flex: 1;
+    border-color: lightgray;
+    background-color: lightgray;
 }
