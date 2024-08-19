@@ -1,6 +1,6 @@
 
 //set initial grid size
-let gridSize = 2;
+let gridSize = 16;
 let squareElement;
 
 //generate grid and set initial values to the grid and text content
